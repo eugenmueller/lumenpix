@@ -1,4 +1,10 @@
 Lumenpix::Application.routes.draw do
+  get "start_pages/home"
+
+  get "start_pages/help"
+
+  get "start_pages/about"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
