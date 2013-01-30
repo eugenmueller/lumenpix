@@ -1,9 +1,13 @@
 Lumenpix::Application.routes.draw do
-  get "start_pages/home"
+  
+  resources :translations #get "translations/index"
+
 
   get "start_pages/help"
 
   get "start_pages/about"
+
+  root :to => "start_pages#home" #get "start_pages/home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
