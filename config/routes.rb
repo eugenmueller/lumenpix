@@ -1,7 +1,8 @@
 Lumenpix::Application.routes.draw do
+
+  get "translations/write_to_yaml"
   
   resources :translations #get "translations/index"
-
 
   get "start_pages/help"
 

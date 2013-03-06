@@ -1,6 +1,18 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
+---
 de:
-  hello: "Hallo Welt"
-  application_title: "Lumenpix DE"
+  application_title: Lumenpix
+  translations:
+    form:
+      submit: Speichern
+    index:
+      title: Übersetzungen
+      delete: Löschen
+      edit: Editieren
+      add_translations: Übersetzungen hinzufügen
+  info:
+    translations:
+      added_translations: Übersetzung hinzugefügt!
+  view:
+    translations:
+      index:
+        submit: Speichern

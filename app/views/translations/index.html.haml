@@ -1,0 +1,31 @@
+%h1= t('.title')
+
+- if flash[:notice].present?
+  .alert.alert.info= flash[:notice]
+
+- if @locales.present?
+  %table.table.table-striped.table-condensed
+    %tr
+      %th= t(".key_token")
+      - @locales.each do |locale|
+        %th= t(".language.#{locale}")
+    - @translation_keys.each do |key|
+      %tr
+        %td= key
+        - @locales.each do |locale|
+          %td
+            - if @translations.exists "#{locale}.#{key}"
+              = ActiveSupport::JSON.decode(@translations["#{locale}.#{key}"]).first + " |"
+            - else
+              = "Missing Translation |" 
+            = link_to t('.delete'), url_for(:action => 'destroy', :id => 0, :key => key.to_s) , 
+                                        :method => :delete, :data =>  {:confirm => "You sure?"}
+
+
+
+
+.well
+  = link_to t('.new_translation'), new_translation_path, :class => "btn"
+
+
+

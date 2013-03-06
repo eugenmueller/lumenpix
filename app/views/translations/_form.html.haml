@@ -1,0 +1,5 @@
+= form_tag translations_path, :class => "form-inline" do
+    = select_tag :locale, options_for_select(@locales), :class => 'span1'
+    = text_field_tag :key, '', :placeholder => "key", :class => 'span4'
+    = text_field_tag :value, '', :placeholder => "value", :class => 'span6'
+    = submit_tag t('.submit'), :class => "btn"
